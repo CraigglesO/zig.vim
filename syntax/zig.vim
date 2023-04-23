@@ -90,6 +90,14 @@ let s:zig_syntax_keywords = {
     \ ,                "asm"
     \ ,                "callconv"
     \ ,                "noalias"]
+    \ , 'zigDefine': ["@cDefine"]
+    \ , 'zigInclude': ["@cImport"
+    \ ,                "@cInclude"
+    \ ,                "@cUndef"
+    \ ,                "@export"
+    \ ,                "@extern"
+    \ ,                "@embedFile"
+    \ ,                "@import"]
     \ , 'zigBuiltinFn': ["align"
     \ ,                  "@addWithOverflow"
     \ ,                  "@as"
@@ -99,10 +107,6 @@ let s:zig_syntax_keywords = {
     \ ,                  "@breakpoint"
     \ ,                  "@alignCast"
     \ ,                  "@alignOf"
-    \ ,                  "@cDefine"
-    \ ,                  "@cImport"
-    \ ,                  "@cInclude"
-    \ ,                  "@cUndef"
     \ ,                  "@clz"
     \ ,                  "@cmpxchgWeak"
     \ ,                  "@cmpxchgStrong"
@@ -114,9 +118,6 @@ let s:zig_syntax_keywords = {
     \ ,                  "@divExact"
     \ ,                  "@divFloor"
     \ ,                  "@divTrunc"
-    \ ,                  "@embedFile"
-    \ ,                  "@export"
-    \ ,                  "@extern"
     \ ,                  "@tagName"
     \ ,                  "@TagType"
     \ ,                  "@errorName"
@@ -127,7 +128,6 @@ let s:zig_syntax_keywords = {
     \ ,                  "@field"
     \ ,                  "@unionInit"
     \ ,                  "@frameAddress"
-    \ ,                  "@import"
     \ ,                  "@newStackCall"
     \ ,                  "@asyncCall"
     \ ,                  "@intToPtr"
@@ -251,6 +251,8 @@ highlight default link zigHexNumber zigNumber
 highlight default link zigOctNumber zigNumber
 highlight default link zigBinNumber zigNumber
 
+highlight default link zigDefine Define
+highlight default link zigInclude Include
 highlight default link zigBuiltinFn Statement
 highlight default link zigKeyword Keyword
 highlight default link zigType Type
