@@ -62,12 +62,12 @@ let s:zig_syntax_keywords = {
     \ ,                  "packed"
     \ ,                  "opaque"]
     \ , 'zigException': ["error"]
-    \ , 'zigVarDecl': ["var"
+    \ , 'zigDummyVariable': ["_"]
+    \ , 'zigKeyword': ["var"
     \ ,                "const"
     \ ,                "comptime"
-    \ ,                "threadlocal"]
-    \ , 'zigDummyVariable': ["_"]
-    \ , 'zigKeyword': ["fn"
+    \ ,                "threadlocal"
+    \ ,                "fn"
     \ ,                "try"
     \ ,                "test"
     \ ,                "pub"
@@ -285,7 +285,6 @@ highlight default link zigConditional Conditional
 highlight default link zigComparatorWord Keyword
 highlight default link zigRepeat Repeat
 highlight default link zigSpecial Special
-highlight default link zigVarDecl Function
 highlight default link zigPreProc PreProc
 highlight default link zigException Exception
 
